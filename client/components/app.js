@@ -1,6 +1,6 @@
 import React from 'react'
 
-const App = ({resolutions}) => {
+const App = ({resolutions, text, onSubmitResolution, onChangeInput, value}) => {
 
     const listOfResolutions = resolutions.map((resolution) => {
         return (
@@ -13,10 +13,13 @@ const App = ({resolutions}) => {
             <h1>My Resolutions</h1>
             <form
                 className="new-resolution"
+                onSubmit={onSubmitResolution}
             >
                 <input
                     type="text"
-                    placeholder="Finish this!"
+                    onChange={onChangeInput}
+                    value={value}
+                    name="input"
                 />
             </form>
             {listOfResolutions}

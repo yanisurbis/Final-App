@@ -9,7 +9,9 @@
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-komposer": "^1.8.0",
-    "react-mounter": "^1.2.0"
+    "react-mounter": "^1.2.0",
+    "react-simple-di": "^1.2.0",
+    "redux": "^3.5.2"
   },
   "description": "final-app",
   "version": "1.0.0",

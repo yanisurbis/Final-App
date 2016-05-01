@@ -7,7 +7,7 @@ import MainLayout from './components/main-layout'
 FlowRouter.route('/', {
     action() {
         mount(MainLayout, {
-            content: <ComposedApp/>
+            content: <ComposedApp text="Sample text"/>
         })
     }
 })
