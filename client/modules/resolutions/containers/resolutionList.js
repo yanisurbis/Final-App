@@ -12,9 +12,14 @@ const composer = ({context}, onData) => {
     }
 }
 
+const depsToPropsMapper = (context, actions) => ({
+    onToggleChecked: actions.resolutions.toggleChecked,
+    context: () => context
+})
+
 const ComposedResolutionList = composeAll(
     composeWithTracker( composer ),
-    useDeps()
+    useDeps(depsToPropsMapper)
 )(ResolutionList)
 
 export default ComposedResolutionList

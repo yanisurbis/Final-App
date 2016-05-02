@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom'
 export default class ResolutionForm extends Component {
     onSubmit(e) {
         e.preventDefault()
-        // console.log("onSubmit " + this.state.value)
 
         const {onSubmitResolution} = this.props
         const node = ReactDOM.findDOMNode(this.refs.resolution)

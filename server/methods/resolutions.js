@@ -14,4 +14,16 @@ export default function() {
             })
         }
     })
+    
+    // TODO write error
+    Meteor.methods({
+        'resolution.toggle'(id, status) {
+            check(id, String)
+            check(status, Boolean)
+            
+            Resolutions.update(id, {
+                $set: {complete: !status}
+            })
+        }
+    })
 }
