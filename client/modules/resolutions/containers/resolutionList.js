@@ -4,9 +4,12 @@ import ResolutionList from '../components/resolutionList'
 import {useDeps} from 'react-simple-di'
 
 const composer = ({context}, onData) => {
-    const {Collections} = context()
-    const resolutions = Collections.Resolutions.find().fetch()
-    onData( null, { resolutions})
+    const {Meteor, Collections} = context()
+
+    if (Meteor.subscribe('resolutions.all').ready()) {
+        const resolutions = Collections.Resolutions.find().fetch()
+        onData( null, { resolutions})
+    }
 }
 
 const ComposedResolutionList = composeAll(
