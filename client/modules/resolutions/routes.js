@@ -1,8 +1,8 @@
 import React from 'react'
 
 import {mount} from 'react-mounter'
-import ComposedApp from './containers/app'
 import MainLayout from './components/main-layout'
+import Resolutions from './components/resolutions'
 
 export default function(injectDeps, {FlowRouter}) {
     const MainLayoutCtx = injectDeps(MainLayout)
@@ -11,7 +11,7 @@ export default function(injectDeps, {FlowRouter}) {
         action() {
             // TODO #3 probably error in content, must be funciton
             mount(MainLayoutCtx, {
-                content: <ComposedApp/>
+                content: () => (<Resolutions/>)
             })
         }
     })
