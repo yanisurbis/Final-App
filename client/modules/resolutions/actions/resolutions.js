@@ -1,9 +1,5 @@
 export default {
-    submitResolution({Collections}, inputText) {
-        Collections.Resolutions.insert({
-            text: inputText,
-            complete: false,
-            createdAt: new Date()
-        })
+    submitResolution({Meteor}, textFromInput) {
+        Meteor.call('resolution.create', textFromInput)
     }
 }
