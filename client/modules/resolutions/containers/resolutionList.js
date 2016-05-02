@@ -14,6 +14,7 @@ const composer = ({context}, onData) => {
 
 const depsToPropsMapper = (context, actions) => ({
     onToggleChecked: actions.resolutions.toggleChecked,
+    onDeleteResolution: actions.resolutions.deleteResolution, 
     context: () => context
 })
 

@@ -26,4 +26,12 @@ export default function() {
             })
         }
     })
+
+    Meteor.methods({
+        'resolution.delete'(id) {
+            check(id, String)
+
+            Resolutions.remove(id)
+        }
+    })
 }

@@ -3,7 +3,7 @@ import Resolution from './resolution'
 
 export default class ResolutionList extends Component {
     render() {
-        const {resolutions, onToggleChecked} = this.props
+        const {resolutions, onToggleChecked, onDeleteResolution} = this.props
 
         const displayResolutions = resolutions.map((resolution) => {
             return (
@@ -12,6 +12,7 @@ export default class ResolutionList extends Component {
                         key={resolution._id}
                         resolution={resolution}
                         onToggleChecked={onToggleChecked}
+                        onDeleteResolution={onDeleteResolution}
                     />
                 </h1>
             )

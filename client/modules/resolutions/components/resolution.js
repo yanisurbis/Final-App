@@ -6,17 +6,28 @@ export default class Resolution extends Component {
         onToggleChecked(resolution._id, resolution.complete)
     }
     
+    deleteResolution() {
+        const {onDeleteResolution, resolution} = this.props
+        onDeleteResolution(resolution._id)
+    }
+    
     render() {
         const {resolution} = this.props
 
         return (
             <div>
-                <input type="checkbox"
-                       readOnly={true}
-                       checked={resolution.complete}
-                       onClick={this.toggleChecked.bind(this)}
+                <input 
+                    type="checkbox"
+                    readOnly={true}
+                    checked={resolution.complete}
+                    onClick={this.toggleChecked.bind(this)}
                 />
                 {resolution.text}
+                <button
+                    onClick={this.deleteResolution.bind(this)}
+                >
+                    Delete
+                </button>
             </div>
         )
     }
