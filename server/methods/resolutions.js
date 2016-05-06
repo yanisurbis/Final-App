@@ -12,15 +12,11 @@ export default function() {
                 complete: false,
                 createdAt: new Date()
             })
-        }
-    })
-    
-    // TODO write error
-    Meteor.methods({
+        },
         'resolution.toggle'(id, status) {
             check(id, String)
             check(status, Boolean)
-            
+
             Resolutions.update(id, {
                 $set: {complete: !status}
             })

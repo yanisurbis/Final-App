@@ -8,6 +8,7 @@
     "mantra-core": "^1.6.1",
     "meteor-node-stubs": "~0.2.0",
     "react": "^15.0.2",
+    "react-bootstrap": "^0.29.3",
     "react-dom": "^15.0.2",
     "react-komposer": "^1.8.0",
     "react-mounter": "^1.2.0",

@@ -21,3 +21,9 @@ kadira:flow-router
 
 meteortoys:allthings
 audit-argument-checks
+
+accounts-password
+accounts-ui
+
+autopublish
+insecure
