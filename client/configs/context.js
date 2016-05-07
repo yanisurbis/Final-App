@@ -13,7 +13,7 @@ import _ from 'lodash'
 // TODO check userSubReady for what
 // check userId for loggedIn
 const authCommon = function () {
-    let userSubReady = Meteor.subscrive('users.current').ready()
+    let userSubReady = Meteor.subscribe('users.current').ready()
 
     const userId = Meteor.userId() || null
     const user = Meteor.user()
