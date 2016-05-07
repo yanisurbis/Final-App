@@ -6,6 +6,7 @@ import {
     Simplest,
     AuthCheck,
     LayoutWithoutHeader,
+    LayoutDefault,
 } from '/client/configs/components'
 
 export default function (injectDeps, {FlowRouter}) {
@@ -16,7 +17,7 @@ export default function (injectDeps, {FlowRouter}) {
         name: 'app.home',
         action() {
             mount(AuthCheckCtx, {
-                LayoutWithoutHeader,
+                LayoutDefault,
                 content: () => (<Simplest title="App main screen" />)
             })
         }

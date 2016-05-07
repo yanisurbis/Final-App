@@ -9,11 +9,11 @@ export default class extends React.Component {
 
         const {
             content,
-            LayoutWithoutHeader,
+            LayoutDefault,
         } = this.props
 
         const displayContent = () => (
-            <LayoutWithoutHeader
+            <LayoutDefault
                 content={content}
             />
         )
