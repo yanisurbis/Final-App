@@ -2,6 +2,7 @@ import React from 'react'
 import {mount} from 'react-mounter'
 
 import {
+    NotFound,
     SimpleLayout,
     Simplest,
     AuthCheck,
@@ -22,4 +23,13 @@ export default function (injectDeps, {FlowRouter}) {
             })
         }
     })
+
+    FlowRouter.notFound = {
+        action() {
+            mount(AuthCheckCtx, {
+                LayoutDefault, content: () => (<NotFound />)
+            })
+        }
+    }
+
 }
