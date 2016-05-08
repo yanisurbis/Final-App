@@ -12,6 +12,7 @@ import {
 
 // import different view for handling user component
 import Register from './components/AccountRegister/Wrapper'
+import Login from './components/AccountLogin/Wrapper'
 
 export default function (injectDeps, {FlowRouter}) {
 
@@ -45,14 +46,24 @@ export default function (injectDeps, {FlowRouter}) {
         }
     });
 
-    // FlowRouter.route('/logout', {
-    //     name: 'app.logout',
-    //     action() {
-    //         Accounts.logout();
-    //         // Meteor.logout(() => {
-    //         FlowRouter.go('/');
-    //         // });
-    //     }
-    // });
+    FlowRouter.route('/login', {
+        name: 'app.login',
+        action() {
+            mount(AuthCheckCtx, {
+                LayoutDefault, content: () => (<Login />),
+                requireNotLoggedIn: true
+            });
+        }
+    });
+
+    FlowRouter.route('/logout', {
+        name: 'app.logout',
+        action() {
+            Accounts.logout();
+            // Meteor.logout(() => {
+            FlowRouter.go('/');
+            // });
+        }
+    });
 
 }
