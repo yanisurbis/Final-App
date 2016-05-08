@@ -1,0 +1,1 @@
+A bunch of wrappers for stuffing our component with the data from our context (user data) and with the actions.

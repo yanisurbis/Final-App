@@ -10,6 +10,9 @@ import {
     LayoutDefault,
 } from '/client/configs/components'
 
+// import different view for handling user component
+import Register from './components/AccountRegister/Wrapper'
+
 export default function (injectDeps, {FlowRouter}) {
 
     const AuthCheckCtx = injectDeps(AuthCheck)
@@ -31,5 +34,15 @@ export default function (injectDeps, {FlowRouter}) {
             })
         }
     }
+
+    FlowRouter.route('/register', {
+        name: 'app.register',
+        action() {
+            mount(AuthCheckCtx, {
+                LayoutDefault, content: () => (<Register />),
+                requireNotLoggedIn: true
+            });
+        }
+    });
 
 }

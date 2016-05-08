@@ -5,6 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "formsy-react": "^0.18.0",
+    "formsy-react-components": "^0.7.1",
     "lodash": "^4.11.2",
     "mantra-core": "^1.6.1",
     "meteor-node-stubs": "~0.2.0",
