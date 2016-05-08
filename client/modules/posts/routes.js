@@ -11,7 +11,11 @@ import {
 import PostCreate from './components/PostCreate/Wrapper'
 import postCreateComposer from './lib/PostCreate'
 
+import Posts from './components/Posts/Wrapper'
+import postsComposer from './lib/Posts'
+
 const PostCreateCtx = postCreateComposer(PostCreate)
+const PostsCtx = postsComposer(Posts)
 
 export default function (injectDeps, {FlowRouter}) {
 
@@ -21,7 +25,7 @@ export default function (injectDeps, {FlowRouter}) {
         name: 'colors.list',
         action() {
             mount(AuthCheckCtx, {
-                LayoutDefault, content: () => (<Simplest title="Posts list"/>)
+                LayoutDefault, content: () => (<PostsCtx />)
             });
         }
     });
