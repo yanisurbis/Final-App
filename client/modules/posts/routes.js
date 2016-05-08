@@ -9,6 +9,9 @@ import {
 } from '/client/configs/components.js';
 
 import PostCreate from './components/PostCreate/Wrapper'
+import postCreateComposer from './lib/PostCreate'
+
+const PostCreateCtx = postCreateComposer(PostCreate)
 
 export default function (injectDeps, {FlowRouter}) {
 
@@ -28,7 +31,7 @@ export default function (injectDeps, {FlowRouter}) {
         name: 'colors.add',
         action() {
             mount(AuthCheckCtx, {
-                LayoutDefault, content: () => (<PostCreate />)
+                LayoutDefault, content: () => (<PostCreateCtx />)
             });
         }
     });
