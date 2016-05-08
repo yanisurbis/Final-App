@@ -33,10 +33,10 @@ export default React.createClass({
 
                         <div className="navbar-collapse collapse navbar-inverse-collapse">
 
+                            {/* <NavHeaderLeftContentCtx /> */}
                             <NavHeaderLeftContentCtx />
-
+                            {/* <NavHeaderRightContentCtx /> */}
                             <NavHeaderRightContentCtx />
-
 
                         </div>
 

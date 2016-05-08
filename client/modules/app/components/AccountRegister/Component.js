@@ -59,7 +59,6 @@ export default React.createClass({
             disabled: this.state.disabled
         };
 
-        // TODO more preferable way of dealing with error during registration
         const {error} = this.props;
 
         return (

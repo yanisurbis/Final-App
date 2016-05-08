@@ -5,7 +5,8 @@ export default class extends React.Component {
     displayUser() {
 
         const {email} = this.props;
-
+        //console.log(email)
+        
         return (
             <ul className="nav navbar-nav navbar-right">
                 <li className="dropdown">
@@ -34,7 +35,7 @@ export default class extends React.Component {
         const {
             userId
         } = this.props;
-
+        
         return userId ? this.displayUser() : this.displayGuest();
     }
 }

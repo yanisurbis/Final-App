@@ -7,12 +7,12 @@ import React, {Component} from 'react'
 //      what after registration?
 export default class extends Component {
     exit(path = '/') {
-
+        const {displayLoading} = this.props;
         // TODO we have FlowRouter here?
         setTimeout(function() {
             FlowRouter.go(path)
         }, 0)
-        //return displayLoading()
+        return displayLoading()
     }
 
     render() {
@@ -47,6 +47,10 @@ export default class extends Component {
         //     return displayContent();
         // }
         if (!userId && requireUserId) {
+            return this.exit()
+        }
+
+        if (userId && requireNotLoggedIn) {
             return this.exit()
         }
 
