@@ -19,7 +19,8 @@ const authCommon = function () {
     const user = Meteor.user()
     const profile = _.get(Meteor.user(), 'profile', {})
     const email = _.get(Meteor.user(), 'emails[0].address', {})
-
+    
+    //console.log("HERE email is " + email)
     return {
         userSubReady,
         userId,

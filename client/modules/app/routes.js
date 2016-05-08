@@ -45,4 +45,14 @@ export default function (injectDeps, {FlowRouter}) {
         }
     });
 
+    // FlowRouter.route('/logout', {
+    //     name: 'app.logout',
+    //     action() {
+    //         Accounts.logout();
+    //         // Meteor.logout(() => {
+    //         FlowRouter.go('/');
+    //         // });
+    //     }
+    // });
+
 }
